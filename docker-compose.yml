@@ -1,0 +1,56 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:15
+    container_name: url-shortener-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: url_shortener
+    ports:
+      - "5432:5432"
+    networks:
+      - fullstack-net
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: drizzle-server
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@db:5432/url_shortener
+      - PORT=4000
+      - BASE_URL=http://localhost:4000
+    ports:
+      - "4000:4000"
+    networks:
+      - fullstack-net
+    depends_on:
+      - db
+    restart: unless-stopped
+
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+      args:
+        - VITE_API_BASE=http://localhost:4000
+    container_name: react-client
+    ports:
+      - "5173:3000"
+    networks:
+      - fullstack-net
+    depends_on:
+      - server
+    restart: unless-stopped
+
+networks:
+  fullstack-net:
+    driver: bridge
+
+volumes:
+  postgres_data:
